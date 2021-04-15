@@ -6,7 +6,7 @@ import {MainFlow} from './MainFlow'
 
 const Drawer = createDrawerNavigator();
 
-const SideMenu = () => {
+export const SideMenu = () => {
     return(
             <Drawer.Navigator initialRouteName="Main" >
                 <Drawer.Screen name="Themes" component={ThemesScreen}/>

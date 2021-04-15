@@ -1,11 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { themes } from '../styles/themes'
+import { themes } from '../styles/themes';
+import {useTheme} from '../hook/useTheme';
 
-const Button = ({onPress, buttonText}) => {
+const Button = ({onPress, buttonText, style}) => {
+    const {colors} = useTheme();
     return (
-        <TouchableOpacity style={styles.costumButton} onPress={onPress}>
-            <Text style={styles.textStyle}>{buttonText} </Text>
+        <TouchableOpacity 
+        style={{
+            ...styles.costumButton,
+            backgroundColor: colors.alt,
+            borderColor: colors.primary,
+            ...style,
+        }} 
+        onPress={onPress}
+        >
+            <Text style={{
+                ...styles.textStyle,
+                color: colors.buttonText,
+            }}>
+                {buttonText} 
+            </Text>
         </TouchableOpacity>
     )
 }
@@ -22,14 +37,13 @@ const styles = StyleSheet.create({
         alignSelf:'center',
         justifyContent: 'center',
         margin:5,
-        backgroundColor: themes.light.colors.alt,
-        borderColor: themes.light.colors.primary,
+        
     },
     textStyle:{
         fontSize:17,
         letterSpacing:0.6,
         textAlign: 'center',
         lineHeight: 22,
-        color: themes.light.colors.buttonText,
+        
     },
 });
