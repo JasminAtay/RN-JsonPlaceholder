@@ -5,3 +5,5 @@
 `yarn add @react-navigation/stack`
 
 `yarn add @react-navigation/drawer`
+
+`yarn add axios`
