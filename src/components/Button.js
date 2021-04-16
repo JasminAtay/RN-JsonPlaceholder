@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { themes } from '../styles/themes';
 import {useTheme} from '../hook/useTheme';
 
-const Button = ({onPress, buttonText, style}) => {
+export const Button = ({onPress, buttonText, style}) => {
     const {colors} = useTheme();
     return (
         <TouchableOpacity 
@@ -25,7 +25,6 @@ const Button = ({onPress, buttonText, style}) => {
     )
 }
 
-export default Button
 
 const styles = StyleSheet.create({
     costumButton:{

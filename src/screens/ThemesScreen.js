@@ -1,25 +1,25 @@
 import React, {useContext} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {useTheme} from '../hook/useTheme';
-import Button from '../components/Button';
-import { ThemeContext } from '../context/ThemeContext';
+import {Button, Container} from '../components';
 
 export const ThemesScreen = () => {
-    const { setTheme } = useContext(ThemeContext);
+    const { theme, setTheme } = useTheme();
     return (
-        <View style={styles.container}>
+        <Container >
             <Text>Themes Screen</Text>
-            <Button onPress={() => setTheme('dark')} buttonText={"Change Theme!"}/>
-        </View>
+            <Button 
+            onPress={() => setTheme('dark')} 
+            buttonText={"Set Dark Theme!"}
+            />
+            <Button 
+            onPress={() => setTheme('light')} 
+            buttonText={"Set Light Theme!"}
+            />
+            <Button 
+            onPress={() => setTheme(theme==='dark'?'light':'dark')} 
+            buttonText={"Toggle Theme!"}
+            />
+        </Container>
     );
 };
-
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-      },
-});
