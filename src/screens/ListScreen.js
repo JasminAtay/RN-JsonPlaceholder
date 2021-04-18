@@ -5,7 +5,6 @@ import {useResources} from '../hook/useResources';
 
 export const ListScreen = ({navigation}) => {
     const resources = useResources('posts');
-    console.log(`resource from list screen: `, resources);
     return (
         <Container>
           <Card>

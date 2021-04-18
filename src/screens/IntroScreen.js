@@ -3,7 +3,6 @@ import { StyleSheet, Text, View } from 'react-native';
 import {Button, Container} from '../components';
 
 export const IntroScreen = ({navigation}) => {
-    console.log(`this is intro: `);
     return (
         <Container>
             <Text style={styles.title}>Intro Screen</Text>
