@@ -11,7 +11,7 @@ export const ThemeContext = createContext({
 
 export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState(deviceMode);
-    // console.log(`theme: `, theme);
+    console.log(`theme: `, theme);
     return(
         <ThemeContext.Provider value = {{colors: themes[theme].colors, setTheme, theme:theme}}>
             {children}

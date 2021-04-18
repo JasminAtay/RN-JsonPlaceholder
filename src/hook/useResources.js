@@ -1,16 +1,18 @@
-import React, {useState, useEffect} from 'react';
-import jsonplaceholder from '../api/jsonPlaceholder';
+import {useState, useEffect} from 'react';
+import jsonPlaceholder from '../api/jsonPlaceholder';
+
 
 export const useResources = (path) => {    
-    const [resources, setResources] = useState('');
+    const [resources, setResources] = useState({name:"initial"});
     useEffect(() => {
         try {
-        (async (path) => {
-            const response = await jsonPlaceholder.get(path);
-        })(path);
-    }catch (err) {
-        console.log(`err: `, err);
-    }
+            (async (path) => {
+                const response = await jsonPlaceholder.get(`${path}`);
+                setResources(response.data);
+            })(path);
+        }catch (err) {
+            console.log(`err: `, err);
+        }
 
     }, [path]);
 

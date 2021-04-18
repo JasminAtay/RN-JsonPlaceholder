@@ -1,26 +1,29 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import {useTheme} from '../hook/useTheme';
 
 
-export const Container = ({children, style}) => {
+export const Card = ({children, style}) => {
     const {colors} = useTheme();
     return (
-        <SafeAreaView style={{
-            ...styles.container,
-            backgroundColor: colors.base,
+        <View style={{
+            ...styles.card,
+            backgroundColor: colors.card,
             ...style,
         }}>
             {children}
-        </SafeAreaView>
+        </View>
     );
 };
 
 
 const styles = StyleSheet.create({
-    container:{
+    card:{
         flex: 1,
+        width:'90%',
+        marginTop:20,
         alignItems: 'center',
         justifyContent: 'center',
+        borderRadius: 40,
     },
 })
