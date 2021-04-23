@@ -3,7 +3,7 @@ import { StyleSheet, Text, FlatList } from 'react-native';
 import { Button, Container, Card, Row} from '../components';
 import {useResources} from '../hook/useResources';
 
-export const ListScreen = ({navigation}) => {
+export const MainScreen = ({navigation}) => {
     const resources = useResources('posts');
     return (
         <Container>

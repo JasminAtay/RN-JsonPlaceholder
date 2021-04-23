@@ -1,5 +1,5 @@
 export * from './IntroScreen';
-export * from './DetailsScreen';
-export * from './ListScreen';
+export * from './SearchScreen';
+export * from './MainScreen';
 export * from './CreditsScreen';
 export * from './ThemesScreen';

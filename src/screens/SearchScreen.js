@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, FlatList } from 'react-native';
 import { useResources } from '../hook/useResources';
 
 
-export const DetailsScreen = ({route}) => {
+export const SearchScreen = () => {
     const { post } = route.params; 
     const comments = useResources(`/comments?postId=${post.id}`);
     return (

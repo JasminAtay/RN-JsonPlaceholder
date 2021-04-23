@@ -7,8 +7,7 @@ export const IntroScreen = ({navigation}) => {
         <Container>
             <Text style={styles.title}>Intro Screen</Text>
             <Button 
-            style={{backgroundColor:'green', borderColor: 'green'}}
-            onPress={() => navigation.navigate('List') } 
+            onPress={() => navigation.navigate('Main') } 
             buttonText={"Let's Begin!"} 
             />
         </Container>

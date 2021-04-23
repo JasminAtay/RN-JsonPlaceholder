@@ -1,4 +1,4 @@
-import {color264862 as c} from './colors';
+import {color2763 as c} from './colors';
 
 export const themes = {
     light: {

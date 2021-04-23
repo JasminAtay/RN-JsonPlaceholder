@@ -1,11 +1,11 @@
-export const color264862 = {
-    primary: '#c06014',
-    primaryDark: '#8A340A',
+export const color2763 = {
+    primary: '#863B50',
+    primaryDark: '#360E1D',
 
-    dark1: '#424642',    
-    dark2: '#536162',
+    dark1: '#7B8490',    
+    dark2: '#393e46',
     
-    light1: '#f3f4ed',
-    light2: '#CCD1AD',
+    light1: '#eeeeee',
+    light2: '#CCADB0',
 
 }

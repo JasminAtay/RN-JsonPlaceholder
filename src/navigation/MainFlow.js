@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {IntroScreen, ListScreen, DetailsScreen} from '../screens';
+import {IntroScreen, MainScreen} from '../screens';
 
 const Stack = createStackNavigator();
 
@@ -12,8 +12,7 @@ export const MainFlow = () =>{
                 component={IntroScreen} 
                 options= {{headerShown: false}}
                 />
-                <Stack.Screen name="List" component={ListScreen}/>
-                <Stack.Screen name="Details" component={DetailsScreen}/>
+                <Stack.Screen name="Main" component={MainScreen}/>
             </Stack.Navigator>
     );
 };
